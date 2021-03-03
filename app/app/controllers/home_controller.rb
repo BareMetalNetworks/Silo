@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-  	@dividerIcon = 'fas fa-hammer'
+  	@dividerIcon = 'fas fa-tractor'
   end
 end
