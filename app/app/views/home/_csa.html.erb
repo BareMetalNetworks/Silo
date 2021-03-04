@@ -66,7 +66,8 @@
         </div>
         <ul class="timeline">
             <li>
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="" /></div>
+                <div class="timeline-image">  
+                    <i class="fas fa-address-card fa-stack-2x fa-inverse"></i></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
                         <h3>Buy CSA Shares</h3>
@@ -76,7 +77,7 @@
                 </div>
             </li>
             <li class="timeline-inverted">
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="" /></div>
+                <div class="timeline-image"><i class="fas fa-shopping-cart fa-stack-2x fa-inverse"></i></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
                         <h3>Weekly Market Days</h3>
@@ -86,7 +87,7 @@
                 </div>
             </li>
             <li>
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="" /></div>
+                <div class="timeline-image"><i class="fas fa-coins fa-stack-2x fa-inverse"></i></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
                         <h3>Spend Your Points</h3>
@@ -107,12 +108,9 @@
             </li>
             <li class="timeline-inverted">
                 <div class="timeline-image">
-                    <h4>
-                        Sign Up
-                        <br />
-                        for CSA
-                        <br />
-                        With Us!
+                    <h4><br/>
+                        <%= link_to "Click to Signup", new_user_registration_path, {:class => 'btn btn-dark btn-large', :style => ' opacity: 70%'} %>
+                     
                     </h4>
                 </div>
             </li>
