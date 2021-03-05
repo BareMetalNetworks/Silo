@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
   	@dividerIcon = 'fas fa-tractor'
-  	@produces = Produce.all
+  	@produces = Produce.order(:name)
   end
 end
