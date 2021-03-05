@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Produces</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Headline</th>
+      <th>Points</th>
+      <th>Price</th>
+      <th>Available</th>
+      <th>Image url</th>
+      <th>Thumb</th>
+      <th>Slug</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @produces.each do |produce| %>
+      <tr>
+        <td><%= produce.name %></td>
+        <td><%= produce.description %></td>
+        <td><%= produce.headline %></td>
+        <td><%= produce.points %></td>
+        <td><%= produce.price %></td>
+        <td><%= produce.available %></td>
+        <td><%= produce.image_url %></td>
+        <td><%= produce.thumb %></td>
+        <td><%= produce.slug %></td>
+        <td><%= link_to 'Show', produce %></td>
+        <td><%= link_to 'Edit', edit_produce_path(produce) %></td>
+        <td><%= link_to 'Destroy', produce, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Produce', new_produce_path %>

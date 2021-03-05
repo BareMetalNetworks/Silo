@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @produce.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @produce.description %>
+</p>
+
+<p>
+  <strong>Headline:</strong>
+  <%= @produce.headline %>
+</p>
+
+<p>
+  <strong>Points:</strong>
+  <%= @produce.points %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @produce.price %>
+</p>
+
+<p>
+  <strong>Available:</strong>
+  <%= @produce.available %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @produce.image_url %>
+</p>
+
+<p>
+  <strong>Thumb:</strong>
+  <%= @produce.thumb %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @produce.slug %>
+</p>
+
+<%= link_to 'Edit', edit_produce_path(@produce) %> |
+<%= link_to 'Back', produces_path %>
