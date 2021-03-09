@@ -1,7 +1,7 @@
 class ProducesController < ApplicationController
   before_action :set_produce, only: %i[ show edit update destroy ]
-  before_action :authenticate_user!, only: %i[ new edit update destroy]
-  before_action :is_admin?, only: %i[new edit update destroy]
+  #before_action :authenticate_user!, only: %i[index show new edit update destroy]
+  before_action :is_admin? #, only: %i[index show new edit update destroy]
   # GET /produces or /produces.json
   def index
     @produces = Produce.all
