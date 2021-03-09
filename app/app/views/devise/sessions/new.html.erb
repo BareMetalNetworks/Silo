@@ -17,11 +17,15 @@
                     <div class="divider-custom-line"></div>
                 </div>
 
-
 <%= form_for(resource,
              as: resource_name, 
              url: session_path(resource_name), 
              class: "login" ) do |f| %>
+
+ <p>   <%= render "devise/shared/error_messages", resource: resource %>
+    </p>
+
+
   <div class="field">
     <%= f.label :email, class: "text-light" %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
