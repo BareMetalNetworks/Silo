@@ -16,6 +16,8 @@ description: "We offer several tender delicious varieties of lettuce. Available 
 available: true,
 points: 1.0,
 price: 3.0,
+variety: "Bib",
+unit: "head",
 },
 
 {
@@ -26,6 +28,8 @@ description: "Crunchy and super tasty cabbages in purple or green varieties",
 available: true,
 points: 1.0,
 price: 3.0,
+variety: "Purple",
+unit: "head",
 },
 
 {
@@ -36,6 +40,8 @@ description: "We have the very freshest carrots, available in several sizes and 
 available: true,
 points: 1.0,
 price: 3.0,
+variety: "Mixed",
+unit: "lb",
 },
 
 ])

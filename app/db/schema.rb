@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2021_03_05_123728) do
     t.string "image_url"
     t.string "thumb"
     t.string "slug"
+    t.string "unit"
+    t.string "variety"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -10,6 +10,9 @@ class CreateProduces < ActiveRecord::Migration[6.1]
       t.string :image_url
       t.string :thumb
       t.string :slug
+      t.string :unit
+      t.string :variety        
+      
 
       t.timestamps
     end
