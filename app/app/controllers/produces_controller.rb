@@ -1,6 +1,7 @@
 class ProducesController < ApplicationController
   before_action :set_produce, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!, only: %i[ new edit update destroy]
+  before_action :is_admin?, only: %i[new edit update destroy]
   # GET /produces or /produces.json
   def index
     @produces = Produce.all
@@ -65,5 +66,12 @@ class ProducesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def produce_params
       params.require(:produce).permit(:name, :description, :headline, :points, :price, :available, :image_url, :thumb, :slug)
+    end
+
+    def is_admin?
+      unless current_user.admin
+        flash[:alert] = "Unauthorized"
+        redirect_to root_path
+      end
     end
 end
