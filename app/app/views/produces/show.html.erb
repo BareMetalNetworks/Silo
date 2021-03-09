@@ -1,9 +1,21 @@
+  <div class="container">
 <p id="notice"><%= notice %></p>
+  
+    <div class='row align-items-center' %>
 
+<%= link_to 'Edit', edit_produce_path(@produce), :class => 'btn btn-info mr-2' %> 
+<%= link_to 'Back', produces_path, :class => 'btn btn-danger' %>
+  </div>
 <p>
   <strong>Name:</strong>
   <%= @produce.name %>
 </p>
+
+<p>
+  <strong>Variety:</strong>
+  <%= @produce.variety %>
+</p>
+
 
 <p>
   <strong>Description:</strong>
@@ -26,24 +38,23 @@
 </p>
 
 <p>
+  <strong>Unit:</strong>
+  <%= @produce.unit %>
+</p>
+
+
+<p>
   <strong>Available:</strong>
   <%= @produce.available %>
 </p>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @produce.image_url %>
+
+
+<p>  
+  <%= image_tag @produce.thumb %>
 </p>
 
-<p>
-  <strong>Thumb:</strong>
-  <%= @produce.thumb %>
-</p>
 
-<p>
-  <strong>Slug:</strong>
-  <%= @produce.slug %>
-</p>
+</div>
 
-<%= link_to 'Edit', edit_produce_path(@produce) %> |
-<%= link_to 'Back', produces_path %>
+</div>
