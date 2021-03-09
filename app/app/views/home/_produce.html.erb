@@ -21,10 +21,10 @@
 
 <section class="page-section portfolio" id="portfolio">
     <div class="container">
-        <!-- Portfolio Section Heading-->
+        <!-- Produce Section Heading-->
     </div>
 
-        <!-- Portfolio Grid Items-->
+        <!-- Produce Grid Items-->
     <div class="row justify-content-center">
 
         <% @produces.each do |produce| %>
@@ -40,7 +40,7 @@
         </div>
 
 
-<!-- Portfolio Modal 1-->
+<!-- Produce Modals-->
 <div class="portfolio-modal modal fade" id="<%=  produce.name.downcase + '-modal' %>" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
@@ -63,7 +63,10 @@
                             <%= image_tag produce.image_url, class: "img-fluid rounded mb-5" %>
                        
                             <!-- Portfolio Modal - Text-->
-                            <p class="mb-5"><%= produce.description %></p>
+                            <p class="text-dark"><%= produce.description %></p>
+                            <p class="mb-5 text-dark">
+                                $<%= produce.price %>0/head </p>
+
                             <button class="btn btn-primary" data-dismiss="modal">
                                 <i class="fas fa-times fa-fw"></i>
                                 Close Window
