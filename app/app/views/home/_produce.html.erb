@@ -40,44 +40,50 @@
         </div>
 
 
-<!-- Produce Modals-->
-<div class="portfolio-modal modal fade" id="<%=  produce.name.downcase + '-modal' %>" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
-    <div class="modal-dialog modal-xl" role="document">
-        <div class="modal-content">
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true"><i class="fas fa-times"></i></span>
-            </button>
-            <div class="modal-body text-center">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <!-- Portfolio Modal - Title-->
-                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label"><%= produce.variety %> <%= produce.name %></h2>
-                            <!-- Icon Divider-->
-                            <div class="divider-custom">
-                                <div class="divider-custom-line"></div>
-                                <div class="divider-custom-icon"><i class="<%= @dividerIcon %>"></i></div>
-                                <div class="divider-custom-line"></div>
+        <!-- Produce Modals-->
+        <div class="portfolio-modal modal fade" id="<%=  produce.name.downcase + '-modal' %>" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label"><%= produce.variety %> <%= produce.name %></h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="<%= @dividerIcon %>"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <%= image_tag produce.image_url, class: "img-fluid rounded mb-5" %>
+                               
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="text-dark mb-2"><%= produce.description %>
+                                    </p>
+                                    <p class="mb-2 text-dark">
+                                        $<%= produce.price %>0/<%= produce.unit %> 
+                                    </p>
+                                    <p class="mb-2 text-dark">
+                                        Available? <i class='fa fa-check'></i>
+                                    </p>
+                                    <p>
+                                    <button class="btn btn-primary" data-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </p>
+                                </div>
                             </div>
-                            <!-- Portfolio Modal - Image-->
-                            <%= image_tag produce.image_url, class: "img-fluid rounded mb-5" %>
-                       
-                            <!-- Portfolio Modal - Text-->
-                            <p class="text-dark"><%= produce.description %></p>
-                            <p class="mb-5 text-dark">
-                                $<%= produce.price %>0/<%= produce.unit %> </p>
-
-                            <button class="btn btn-primary" data-dismiss="modal">
-                                <i class="fas fa-times fa-fw"></i>
-                                Close Window
-                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
 
         <% end %>
