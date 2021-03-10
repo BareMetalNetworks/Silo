@@ -1,58 +1,86 @@
   <div class="container">
-<p id="notice"><%= notice %></p>
-  
-    <div class='row align-items-center' %>
+
+<p>foo /p>
+
+
+    <div class='row align-items-center mb-2' %>
 
 <%= link_to 'Edit', edit_produce_path(@produce), :class => 'btn btn-info mr-2' %> 
 <%= link_to 'Back', produces_path, :class => 'btn btn-danger' %>
   </div>
+
+
+    <div class='row align-items-center' %>
 <p>
   <strong>Name:</strong>
   <%= @produce.name %>
 </p>
 
+ </div>
+
+    <div class='row align-items-center' %>
 <p>
   <strong>Variety:</strong>
   <%= @produce.variety %>
 </p>
 
+ </div>
+
+    <div class='row align-items-center' %>
 
 <p>
   <strong>Description:</strong>
   <%= @produce.description %>
 </p>
 
+ </div>
+
+    <div class='row align-items-center' %>
 <p>
   <strong>Headline:</strong>
   <%= @produce.headline %>
 </p>
 
+ </div>
+
+    <div class='row align-items-center' %>
 <p>
   <strong>Points:</strong>
   <%= @produce.points %>
 </p>
+ </div>
 
+    <div class='row align-items-center' %>
 <p>
   <strong>Price:</strong>
   <%= @produce.price %>
 </p>
+ </div>
 
+    <div class='row align-items-center' %>
 <p>
   <strong>Unit:</strong>
   <%= @produce.unit %>
 </p>
 
+ </div>
 
+    <div class='row align-items-center' %>
 <p>
   <strong>Available:</strong>
   <%= @produce.available %>
 </p>
 
+ </div>
 
+    <div class='row align-items-center' %>
 
 <p>  
   <%= image_tag @produce.thumb %>
 </p>
+
+</div>
+
 
 
 </div>
