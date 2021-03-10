@@ -7,20 +7,17 @@
 
 <h1>Produces</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Variety</th>
-      <th>Description</th>
-      <th>Headline</th>
-      <th>Points</th>
-      <th>Price</th>
-      <th>Unit</th>
-      <th>Avail?</th>
-      <th>Image url</th>
-      <th>Thumb</th>
-      <th>Slug</th>
+      <th scope="col">Name</th>
+      <th scope="col">Variety</th>
+      <th scope="col">Description</th>
+      <th scope="col">Headline</th>
+      <th scope="col">Points</th>
+      <th scope="col">Price</th>
+      <th scope="col">Unit</th>
+      <th scope="col">Avail?</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -28,6 +25,7 @@
   <tbody>
     <% @produces.each do |produce| %>
       <tr>
+
         <td><%= produce.name %></td>
         <td><%= produce.variety %></td>
         <td><%= produce.description %></td>
@@ -36,12 +34,9 @@
         <td><%= produce.price %></td>
         <td><%= produce.unit %></td>
         <td><%= produce.available %></td>
-        <td><%= produce.image_url %></td>
-        <td><%= produce.thumb %></td>
-        <td><%= produce.slug %></td>
-        <td><%= link_to 'Show', produce %></td>
-        <td><%= link_to 'Edit', edit_produce_path(produce) %></td>
-        <td><%= link_to 'Destroy', produce, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', produce, class: 'btn btn-primary' %></td>
+        <td><%= link_to 'Edit', edit_produce_path(produce), class: 'btn btn-info' %></td>
+        <td><%= link_to 'Destroy', produce, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -49,7 +44,7 @@
 
 <br>
 
-<%= link_to 'New Produce', new_produce_path %>
+<%= link_to 'New Produce', new_produce_path, class: 'btn btn-primary' %>
 
 </div>
 </div>
