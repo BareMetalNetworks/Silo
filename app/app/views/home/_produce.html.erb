@@ -35,7 +35,10 @@
                     <div class="portfolio-item-caption-content text-center text-white"><h4 class="my-3"><%= produce.name %></h4></div>
                 </div>
                 <%= image_tag produce.thumb, class: "img-fluid" %>
-                
+                <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading"><%= produce.name %></div>
+                        <div class="portfolio-caption-subheading text-muted"><%= produce.variety %></div>
+                    </div>
             </div>
         </div>
 
