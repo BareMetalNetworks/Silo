@@ -65,5 +65,5 @@ service nginx restart
 
 From the app directory run:
 ```
-cd -; git pull; cd -; bundle install --deployment --without development test; bundle exec rake assets:precompile db:migrate RAILS_ENV=production; passenger-config restart-app $(pwd)
+cd ../ ; git pull; cd -; bundle install --deployment --without development test; bundle exec rake assets:precompile db:migrate RAILS_ENV=production; passenger-config restart-app $(pwd)
 ```
