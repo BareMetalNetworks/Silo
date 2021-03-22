@@ -48,6 +48,7 @@
   --gray-dark: #000000;
   --primary: #4b6600;
   --secondary: #6c757d;
+  --burgandy: #800948;;
   --success: #28a745;
   --info: #17a2b8;
   --warning: #4b6600;
@@ -9800,6 +9801,10 @@ button.bg-dark:focus {
   color: #4b6600 !important;
 }
 
+.text-burgandy {
+  color: #800948 !important;
+}
+
 a.text-primary:hover, a.text-primary:focus {
   color: #e6b301 !important;
 }
@@ -10084,7 +10089,7 @@ img::-moz-selection {
   border: 0;
 }
 #mainNav .navbar-brand {
-  color: #4b6600;
+  color: #800948;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   letter-spacing: 0.0625em;
