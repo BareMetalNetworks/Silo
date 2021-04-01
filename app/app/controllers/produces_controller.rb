@@ -4,7 +4,7 @@ class ProducesController < ApplicationController
   before_action :is_admin? #, only: %i[index show new edit update destroy]
   # GET /produces or /produces.json
   def index
-    @produces = Produce.all
+    @produces = Produce.available
   end
 
   # GET /produces/1 or /produces/1.json
