@@ -26,6 +26,9 @@
 
         <!-- Produce Grid Items-->
     <div class="row justify-content-center">
+        <% if @produces.count == 0 %>
+            <h2>Sorry, no produce is available currently. Check back soon!</h2>
+        <% end %>
 
         <% @produces.each do |produce| %>
         <div class="col-md-6 col-lg-4 mb-5">
